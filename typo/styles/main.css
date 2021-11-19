@@ -1,13 +1,10 @@
 @font-face {
-  font-family: 'SixCapsRegular';
-  src: url('SixCaps-webfont.woff') format('woff');
+ font-family: 'Shadows Into Light', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
   font-weight: bold;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Shadows Into Light', cursive;
-  src: url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-}
+
 html {
   background-color: grey;
 }
