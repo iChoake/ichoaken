@@ -1,56 +1,217 @@
-<!DOCTYPE html>
-<html lang="en-us"
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>My Digital Dive | Life and Times</title>
-<link rel="icon" type="images/avatar.png" href="favicon.ico">
-	<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/final.css">
-<link rel="stylesheet" href="styles/hint.css">
-</head>
-	<body>
-   <header>
-	   <img src="images/avatar.png" alt="avatar" width="60">
-     <h2 class="h2di">My Digital Dive | Life and Times</h2>
-	   <h3 class="h3t">Enjoy the Mystery that is ME! </h3>
-   </header>
-     <nav id="nav_menu">
-       <ul class="nav_menu">
-         <li><a href="index.html" class="current">Home</a></li>
-         <li><a href="gaming/eso.html">Gaming</a></li>
-		   <li><a href="art/art.html">Art</a>
-         <li><a href="typo/wallpaper.html">Typo</a>
-           </ul>
-     </nav>
-	</div>
-  <aside>
-       <div id="hp"> <img src="images/CornieSteven.jpg" alt="UniCornie" width="175" height="175">
-         <ul class="side-nav">
-           <li><a href="https://www.youtube.com/channel/UCDl7VmS3gD2BQBVZUlL21-A" target="_blank" rel="noreferrer noopener">My YouTube</a></li>
-           <li><a href="https://giphy.com/channel/choake" target="_blank" rel="noreferrer noopener">Giphy</a></li>
-           <li><a href="https://www.deviantart.com/instantics" target="_blank" rel="noreferrer noopener">Deviant Art</a></li>
-           <li><a href="https://www.facebook.com/theChoake/" target="_blank" rel="noreferrer noopener">Facebook</a></li>
-         </ul>
-       </div>
-     </aside>
-			<main>
-    <div id="art">
-       <article>
-         <h3>Hello, I am Steven 'Cho' Chaplinski.</h3>
-         <p class="test2">I guess you might consider me as a wandering wonderer, a mystic, and a seeker. For more than a decade, I've been delving into the mysteries of our history. Subjects like Comparative Mythology and Religions, Cultural Anthropology and Archeology, and Human Anatomy and Physiology I and II. Once upon a time, when the Virus hadn't emerged, I taught classes on topics like Jungle Medicine, Ceremonial Setting and Beliefs, DMT Chemistry, and many more lesser known plant medicines. As a lover of mystery, I enjoy discovering unknown objects and material to ponder. However, as an abnormally normal human, I find humans on this planet are not always kind to those on the spectrum, or critical thinkers, as you might call them.</p></article>
-         <article>
-         <blockquote>
-           <blockquote>
-             <p class="test2">However, an immersive study into South American Jungle Medicine Leveled me up like Mario! All those experiences, 12 vision quests later, completely changed my life and my perspectives. I explore the mysteries of consciousness through meditation, breathwork, and the jungle juice known as Ayahuasca. The greatest gift so far has been my opportunity to share what I have been shown and learned from a Spirit of Nature. I'll happily be your Cosmic Companion!</p>
-           </blockquote></article>
+l*{
+	margin: 0;
+	padding: o;
+}
+html{
+width: 100%;
+}
+
+/*header*/
+header img {
+float: left;
+margin-right: 1em;
+}
+header {
+	border: black solid 3px;
+	border-width: 100%;
+	background-image: -webkit-linear-gradient(30deg, white 0%, blue 75%, black 99%);
+	background-image: -moz-linear-gradient(30deg, white 0%, blue 75%, black 99%);
+	padding: .25em 0 .5em .5em;
+	margin: 0;
+}
+.h2di {
+	color: whitesmoke;
+	text-shadow: 2px 0px 5px rgba(0,0,0,1);
+}
+
+header h2 {
+    font-family: 'Oswald', sans-serif;
+		font-size: 205%;
+		margin: 0;
+}
+.fid {text-shadow: 2px 0px 5px rgba(0,0,0,1);}
+
+.h3t {
+text-shadow: 2px 0px 5px rgba(0,0,0,1);
+	color: yellow;
+}
+header h3 {
+    font-family: 'Oswald', sans-serif;
+	font-size: 155%;
+	color:#C8C8C8
+}
+/*Body*/
+body {
+width: 95%;
+border: black solid 5px;
+box-shadow: 0px 0px 50px black;
+border-radius: 5px 5px 5px 5px;
+font-family: 'Oswald', sans-serif;
+font-size: 100%;
+margin-right: 7em;
+margin-left: 2em;
+}
+p.test2 {
+    width: 700px;
+
+    word-break: keep-all;
+}
+
+p {
+    word-wrap: break-word;
+}
+#gif {
+	float: left;
+	width:100px; height:100px;
+}
+#hp {
+	 text-align: justify;
+	 padding: 1em;
+}
+
+#hp {
+	float: left;
+margin: 5px;
+}
+
+main h1 {
+font-size: 140%;
+}
+
+section{
+width: 700px;
+background-color: white;
+border: black solid;
+box-shadow: 0px 0px 15px black;
+margin: 0;
+border-bottom: 2px solid;
+float: right;
+border-bottom: 2px solid black;
+font-family: 'Oswald', sans-serif;
+font-size: 100%;
+}
+
+section h3{
+padding: 0px;
+}
+/*aside*/
+section{
+ width:600px;
+    margin-left: 15px;
+	padding-left: 65px;
+}
+/*Sidebar*/
+.side-nav li{
+        list-style: none;
+    border: 2px solid #000;
+    padding: 2px;
+    margin: 0px 0px 2px 0px;
+    background:black;
+    text-align: center;
+}
+.side-nav li a{
+        text-decoration: none;
+    color: red;
+
+}
+
+/*Nav Menu*/
+#nav_menu ul {
+	width:100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#nav_menu ul li {
+float: left;
+
+}
+
+#nav_menu ul ul {
+display: none;
+position: absolute;
+top: 100%;
+}
+
+#nav_menu ul li a {
+display: block;
+width: 100%;
+text-align: center;
+padding: 1em 1em;
+text-decoration: none;
+background-color: black;
+color: white;
+font-weight: bold;
+font-size: 14px;
+}
+
+#nav_menu ul li a.current {
+color: red;
+}
+
+#nav_menu ul ul li {
+float: left;
+}
+
+#nav_menu ul li:hover > ul {
+display: block;
+}
+
+#nav_menu>ul::after{
+content: "";
+display: block;
+clear: both;
+}
+
+#nav_menu ul .sub-menu a:hover{
+        background: purple;
+}
+h1:first-letter { font-size: 175%}
+h2:first-letter { font-size: 155%}
+h3:first-letter { font-size: 145%}
+
+header h3 {
+font-size: 120%;
+margin: 0;
+padding-left: 1em;
+}
+
+ul{
+padding: 0;
+}
+
+a:link, a:visited {color: yellow; font-weight: bold;}
+
+a:hover, a:focus {color:magenta; font-weight: bold}
 
 
-  <blockquote>
-	 <footer> &nbsp;
-			   <div id="ft">
-          &copy; <a href="https://linktr.ee/choake" target="_blank" class="fid" rel="noreferrer noopener">The Choake</a>
-	</div>
-			 </footer>
-</body>
-  </html>
+/* Footer*/
+footer {
+font-size: 85%;
+width: 100%;
+clear:both;
+text-align: center;
+border: black solid 3px;
+border-width: 3px 0px 0px 0px;
+padding: .75em;
+background-image: -webkit-linear-gradient(30deg, black 0%, blue 25%, white 99%);
+background-image: -moz-linear-gradient(30deg, white 0%, blue 25%, black 99%);
+}
+.fid {
+	color: pink;
+	text-shadow: 2px 0px 5px rgba(0,0,0,1);
+}
+@media screen{
+.bid {
+}
+.container {
+}
+.nav_menu {
+}
+.art {
+}
+
+@media (min-width: 798px) and (max-width: 923px){
+}
