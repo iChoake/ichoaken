@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Digital Dive | Life and Times</title>
+	  <link rel="icon" type="images/avatar.png" href="favicon.ico">
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+<body id="body">
+	<div id="motivation">
+		<div class="motivation-holder">
+			<div class="small-text">
+				<p>Guess what, it's</p>
+			</div>
+			<div class="big-text">
+				<h1><span id="literal-day"></span></h1>
+			</div>
+			<div class="small-text">
+				<p><span id="month-text"></span></p>
+			</div>
+
+			<div class="big-text">
+				<h1><span id="month"></span></h1>
+			</div>
+			<div class="small-text">
+				<p>at</p>
+			</div>
+			<div class="big-text">
+				<h1><span id="time"></span></h1>
+			</div>
+
+			<div class="small-text">
+				<p><span id="am-pm"></span></p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		String.prototype.format = function() {
+			var formatted = this;
+			for (var i = 0; i < arguments.length; i++) {
+				var regexp = new RegExp('\\{' + i + '\\}', 'gi');
+				formatted = formatted.replace(regexp, arguments[i]);
+
+			}
+			return formatted;
+		};
+
+		function calculateTime() {
+			var Make_It_12_Hour = true;
+			var currentTime = new Date();
+			var hours = currentTime.getHours();
+			var minutes = currentTime.getMinutes();
+			var ampm = (hours >= 12) ? "pm" : "am";
+			if (Make_It_12_Hour) {
+				hours = hours % 12;
+				hours = hours ? hours : 12;
+				minutes = minutes < 10 ? "0" + minutes : minutes;
+			} else {
+				if (minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				if (hours < 10) {
+					hours = "0" + hours;
+				}
+
+			}
+			document.getElementById("time").innerText = "{0}:{1}".format(hours, minutes);
+			document.getElementById("am-pm").innerText = ampm;
+
+		}
+
+		function calculateDate() {
+			var months = new Array("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december");
+			var days = new Array("sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday");
+			var currentTime = new Date();
+			var day = currentTime.getDate().toString();
+			var month = months[currentTime.getMonth()];
+			var literalDay = days[currentTime.getDay()];
+			var dayInd = (day.length >= 2) ? day.substring(day.length - 1) : day;
+			var ending = "";
+			switch (dayInd) {
+				case "1":
+					ending = (day == "11") ? "th" : "st";
+					break;
+				case "2":
+					ending = (day == "12") ? "th" : "nd";
+					break;
+				case "3":
+					ending = (day == "13") ? "th" : "rd";
+					break;
+				default:
+					ending = "th";
+					break;
+
+			}
+
+			document.getElementById("month").innerText = month;
+			document.getElementById("month-text").innerText = "the {0}{1} of".format(day, ending);
+			document.getElementById("literal-day").innerText = literalDay;
+
+		}
+
+		calculateTime();
+		calculateDate();
+		setInterval(calculateTime, 1000);
+		setInterval(calculateDate, 2000);
+	</script>
+</body>
+</html>
