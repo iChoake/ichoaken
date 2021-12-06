@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-us"> <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>My Digital Dive | Life and Times</title>
+<link rel="icon" type="images/avatar.png" href="favicon.ico">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/final.css"> </head>
+
+	
+	<style>
+		@font-face {
+			font-family: 'SixCapsRegular';
+			src: url('SixCaps-webfont.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		article{
+			background-color:grey;
+		}
+
+		body {
+			background-color; grey;
+			background-size: 99%;
+
+		}
+
+		#motivation {
+			margin: 40px 0 0 0;
+		}
+
+		.motivation-holder {
+			width: 200px;
+			margin: auto;
+			text-align: center;
+
+		}
+
+		div.small-text {
+			text-align: center;
+
+		}
+
+		hr {
+			height: 2px;
+			border: none;
+			width: 100%;
+			background-color: white;
+
+		}
+
+		p {
+			overflow: hidden;
+			text-align: center;
+
+		}
+
+		p:before,
+		p:after {
+			background-color: #fff;
+			content: "";
+			display: inline-block;
+			height: 2px;
+			position: relative;
+			vertical-align: middle;
+			width: 50%;
+			margin: -2px 0 0 0;
+
+		}
+
+		p:before {
+			right: 0.5em;
+			margin-left: -50%;
+
+		}
+
+		p:after {
+			left: 0.5em;
+			margin-right: -50%;
+
+		}
+
+		p {
+			font-family: Helvetica, sans-serif;
+			font-weight: 600;
+			font-size: 14px;
+			color: black;
+			text-transform: uppercase;
+			text-shadow: 0px 2px 3px #555555;
+
+		}
+
+		h1 {
+			font-family: 'SixCapsRegular', sans-serif;
+			font-size: 120px;
+			font-weight: 100;
+			color: white;
+			text-transform: uppercase;
+			margin: 0px 2px 2;
+			text-shadow: rgb(187, 187, 187) 0px 2px 2px,
+				rgb(181, 181, 181) 0px 2px 0px,
+				rgb(172, 172, 172) 0px 3px 0px,
+				rgb(160, 160, 160) 0px 4px 0px,
+				rgb(145, 145, 145) 0px 5px 0px,
+				rgb(127, 127, 127) 0px 6px 0px,
+				rgba(0, 0, 0, 0.199219) 0px 7px 1px,
+				rgba(0, 0, 0, 0.296875) 0px 8px 6px;
+		}
+	</style>
+
+<header>
+		<img src="images/avatar.png" alt="avatar" width="60">
+		<h2 class="h2di">My Digital Dive | Life and Times</h2>
+		<h3 class="h3t">Enjoy the Mystery that is ME! </h3>
+</header>
+<article>
+<nav id="nav_menu">
+		<ul class="nav_menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gaming.html">Gaming</a></li>
+				<li><a href="typo.html" class="current">TypoClocK</a></li>
+				<li><a href="glitch/index.html">GlitchD</a></li>
+		</ul>
+</nav>
+<main>
+<body id="body">
+
+	<div id="motivation">
+		<div class="motivation-holder">
+			<div class="small-text">
+				<p>Guess what, it's</p>
+			</div>
+			<div class="big-text">
+				<h1><span id="literal-day"></span></h1>
+			</div>
+			<div class="small-text">
+				<p><span id="month-text"></span></p>
+			</div>
+			<div class="big-text">
+				<h1><span id="month"></span></h1>
+			</div>
+			<div class="small-text">
+				<p>at</p>
+			</div>
+			<div class="big-text">
+				<h1><span id="time"></span></h1>
+			</div>
+			<div class="small-text">
+				<p><span id="am-pm"></span></p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		String.prototype.format = function() {
+			var formatted = this;
+			for (var i = 0; i < arguments.length; i++) {
+				var regexp = new RegExp('\\{' + i + '\\}', 'gi');
+				formatted = formatted.replace(regexp, arguments[i]);
+			}
+			return formatted;
+		};
+
+		function calculateTime() {
+			var Make_It_12_Hour = true;
+			var currentTime = new Date();
+			var hours = currentTime.getHours();
+			var minutes = currentTime.getMinutes();
+			var ampm = (hours >= 12) ? "pm" : "am";
+			if (Make_It_12_Hour) {
+				hours = hours % 12;
+				hours = hours ? hours : 12;
+				minutes = minutes < 10 ? "0" + minutes : minutes;
+			} else {
+				if (minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				if (hours < 10) {
+					hours = "0" + hours;
+				}
+
+			}
+
+			document.getElementById("time").innerText = "{0}:{1}".format(hours, minutes);
+			document.getElementById("am-pm").innerText = ampm;
+
+		}
+
+		function calculateDate() {
+			var months = new Array("january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december");
+			var days = new Array("sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday");
+			var currentTime = new Date();
+			var day = currentTime.getDate().toString();
+			var month = months[currentTime.getMonth()];
+			var literalDay = days[currentTime.getDay()];
+			var dayInd = (day.length >= 2) ? day.substring(day.length - 1) : day;
+			var ending = "";
+			switch (dayInd) {
+				case "1":
+					ending = (day == "11") ? "th" : "st";
+					break;
+				case "2":
+					ending = (day == "12") ? "th" : "nd";
+					break;
+				case "3":
+					ending = (day == "13") ? "th" : "rd";
+					break;
+				default:
+					ending = "th";
+					break;
+
+			}
+			document.getElementById("month").innerText = month;
+			document.getElementById("month-text").innerText = "the {0}{1} of".format(day, ending);
+			document.getElementById("literal-day").innerText = literalDay;
+
+		}
+
+		calculateTime();
+		calculateDate();
+		setInterval(calculateTime, 1000);
+		setInterval(calculateDate, 2000);
+	</script>
+</main>
+
+
+<footer> &nbsp;
+	<div id="ft">
+		&copy; <a href="https://linktr.ee/choake" target="_blank" class="fid" rel="noreferrer noopener">The Choake</a>
+	</div>
+</footer>
+</article>
+</body>
+
+</html>
