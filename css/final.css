@@ -190,7 +190,7 @@ a:hover, a:focus {color:magenta; font-weight: bold}
 /* Footer*/
 footer {
 font-size: 85%;
-width: 100%;
+width: auto;
 clear:both;
 text-align: center;
 border: black solid 3px;
