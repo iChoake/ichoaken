@@ -1,0 +1,128 @@
+/* Reset */
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page Container */
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+/* Container for the code block and header */
+
+.code-container {
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    border-radius: 0.5rem;
+    width: 75vw;
+    margin: 2rem;
+}
+
+
+/* HTML Header */
+
+.html {
+    background: #ff9800;
+    margin: 0;
+    padding: 0.25rem 2rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+
+/* CSS Header */
+
+.css {
+    background: #399cbd;
+    margin: 0;
+    padding: 0.25rem 2rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+
+/* JS Header */
+
+.js {
+    background: #ffdb58;
+    margin: 0;
+    padding: 0.25rem 2rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+// Small line-height for CSS and JS boxes
+#css,
+#js {
+    p {
+        line-height: 0.5;
+    }
+}
+
+
+/* Code on black background */
+
+.code-block {
+    padding: 1rem 3rem;
+}
+
+.tag {
+    color: #ab875d;
+}
+
+.class {
+    color: #dfc48c;
+}
+
+.attr {
+    color: #8f9c6c;
+}
+
+.text {
+    color: #eee;
+}
+
+.prop {
+    color: #9b869c;
+}
+
+.value {
+    color: #cd6a51;
+}
+
+.var {
+    color: #809bbd;
+}
+
+.obj {
+    color: #96b38a;
+}
+
+
+/* Indention Helpers */
+
+.indent-half {
+    padding: 0 1rem;
+}
+
+.indent-1 {
+    padding: 0 2rem;
+}
+
+.indent-2 {
+    padding: 0 4rem;
+}
+
+// spacing helpers
+.lead {
+    margin-bottom: 2rem;
+}
