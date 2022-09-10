@@ -1,0 +1,242 @@
+/* Steven Chaplinski
+MAny days at least a weak of work 9-11-2022 is the due date.
+This is a css for the special products list // redirect site with 404 error */
+body
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+
+    width: 800px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+
+    border: 3px solid black;
+    background-color: white;
+    box-shadow: 0 9px 18px 8px;
+}
+
+html
+{
+    background-image: url('../images/bats.gif');
+}
+
+header
+{
+    padding: 15px;
+
+    border-bottom: 2px solid black;
+    background-image: -webkit-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image:    -moz-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image:      -o-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image:         linear-gradient(45deg, white 0%, orange 75%, black 100%);
+}
+
+header img
+{
+    float: left;
+
+    padding-right: 15px;
+}
+
+header h2
+{
+    font-size: 250%;
+}
+
+header h3
+{
+    font-size: 150%;
+}
+
+h1,
+h2,
+h3,
+p
+{
+    margin: 0;
+    padding: 0;
+}
+
+aside
+{
+    line-height: 125%;
+
+    float: left;
+
+    width: 160px;
+    margin: 0 30px 400px -30px;
+}
+
+main li > a[href]
+{
+    font-weight: bold;
+
+    text-decoration: none;
+
+    color: black;
+}
+
+main
+{
+    padding: 20px 25px 25px;
+}
+
+main h1
+{
+    font-size: 150%;
+
+    margin-bottom: .5em;
+}
+
+main h1:first-letter
+{
+    font-size: 200%;
+}
+
+main h2
+{
+    font-size: 125%;
+
+    margin: .9em 0 .5em 0;
+}
+
+main h3
+{
+    font-size: 125%;
+
+    margin-bottom: .5em;
+}
+
+main p
+{
+    margin-bottom: .5em;
+}
+
+#nav_list ul li
+{
+    display: block;
+
+    height: 45px;
+    margin-bottom: .5em;
+
+    list-style-type: none;
+
+    border: 2px double black;
+    background-color: orange;
+}
+
+#nav_list ul li a
+{
+    display: block;
+
+    padding: 1em 0 1em 10px;
+
+    text-decoration: none;
+}
+
+#nav_list ul li:hover > ul
+{
+    display: block;
+}
+
+#nav_menu ul li:hover > ul
+{
+    display: block;
+}
+
+main > a[href]
+{
+    font-size: 150%;
+    font-weight: bold;
+    line-height: 250%;
+
+    text-decoration: none;
+
+    color: black;
+}
+
+img
+{
+    float: left;
+
+    margin-bottom: 0;
+}
+
+#nav_menu ul
+{
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+#nav_menu ul ul
+{
+    position: absolute;
+    top: 100%;
+
+    display: none;
+}
+
+#nav_menu ul li a
+{
+    display: block;
+
+    width: 146px;
+    padding: 1em 0;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+}
+
+#nav_menu ul li
+{
+    float: left;
+
+    padding-left: 10px;
+
+    list-style-type: none;
+
+    border: 2px double black;
+    background-color: black;
+}
+
+#nav_menu ul li:hover > ul
+{
+    display: block;
+}
+
+#nav_menu > ul::after
+{
+    display: block;
+    clear: both;
+
+    content: '';
+}
+
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus
+{
+    background-color: gray;
+}
+
+footer
+{
+    font-size: 90%;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-top: 2px solid black;
+    background-image: -webkit-linear-gradient(45deg, black 0%, orange 30%, white 100%);
+    background-image:    -moz-linear-gradient(45deg, black 0%, orange 30%, white 100%);
+    background-image:      -o-linear-gradient(45deg, black 0%, orange 30%, white 100%);
+    background-image:         linear-gradient(45deg, black 0%, orange 30%, white 100%);
+}
